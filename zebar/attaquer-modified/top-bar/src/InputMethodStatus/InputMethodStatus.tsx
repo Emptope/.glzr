@@ -22,13 +22,13 @@ const InputMethodStatus: Component<InputMethodStatusProps> = (props) => {
     if (!layout) return "LANG";
     const lower = layout.toLowerCase();
     if (lower.startsWith("zh")) return "zh";
-    if (lower.startsWith("en")) return "EN";
-    if (lower.startsWith("ja")) return "JA";
-    if (lower.startsWith("ko")) return "KO";
-    if (lower.startsWith("ru")) return "RU";
-    if (lower.startsWith("fr")) return "FR";
-    if (lower.startsWith("de")) return "DE";
-    if (lower.startsWith("es")) return "ES";
+    if (lower.startsWith("en")) return "en";
+    if (lower.startsWith("ja")) return "ja";
+    if (lower.startsWith("ko")) return "ko";
+    if (lower.startsWith("ru")) return "ru";
+    if (lower.startsWith("fr")) return "fr";
+    if (lower.startsWith("de")) return "de";
+    if (lower.startsWith("es")) return "es";
     return lower.slice(0, 2).toUpperCase();
   };
 

@@ -46,6 +46,7 @@ const ICON_MAP: Record<string, string> = {
   obs64: "icons8-obs-32.png",
   obsidian: "Obsidian-32.png",
   postman: "Postman-32.png",
+  qq: "QQ-32.png",
   rider64: "rider64-32.png",
   signal: "Signal-32.png",
   spotify: "icons8-spotify-32.png",
