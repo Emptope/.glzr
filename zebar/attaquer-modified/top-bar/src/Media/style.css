@@ -35,6 +35,7 @@
   max-width: 200px;
   margin-left: 3px;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .prev,
