@@ -15,7 +15,7 @@ const Application: Component<ApplicationProps> = (props) => {
   const handleAppClick = () => {
     handleClick();
     props.glazewm.runCommand(
-      `shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/FocusWindow.ahk ${props.window.handle}`,
+      `shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/FocusWindow.ahk ${props.window.handle}`
     );
   };
 
@@ -40,7 +40,7 @@ const Application: Component<ApplicationProps> = (props) => {
     Cursor: <img src="./assets/icons/cursor.png" class="app-icon" />,
     Code: (
       <img
-        src="./assets/icons/icons8-visual-studio-code-insides-32.png"
+        src="./assets/icons/icons8-visual-studio-code-32.png"
         class="app-icon"
       />
     ),
