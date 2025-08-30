@@ -45,6 +45,7 @@ const ICON_MAP: Record<string, string> = {
   fanspeedsetting: "icons8-fan-32.png",
   firefox: "Firefox-32.png",
   geogebracalculator: "GeoGebraCalculator-32.png",
+  ghelper: "GHelper-32.png",
   happ: "happ-32.png",
   matlab: "matlab-32.png",
   medibangpaintpro: "icons8-medibang-paint-32.png",

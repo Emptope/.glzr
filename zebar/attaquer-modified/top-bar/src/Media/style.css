@@ -1,4 +1,5 @@
 .media {
+  display: flex;
   font-size: 12px;
   max-width: 500px;
   white-space: nowrap;

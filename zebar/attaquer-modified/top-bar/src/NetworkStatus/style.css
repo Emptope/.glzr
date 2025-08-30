@@ -1,4 +1,5 @@
 .network {
+  display: flex;
   color: var(--white);
   padding: 0 5px 0 5px;
 
@@ -28,10 +29,7 @@
 }
 .i-wifi {
   filter: brightness(0) invert(1);
-  /* margin-bottom: 0px; */
-  /* margin-left: -4px; */
 }
 .i-eth {
   filter: brightness(0) invert(1);
-  /* margin: 0 1px 0px -3px; */
 }

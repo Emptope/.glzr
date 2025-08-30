@@ -1,7 +1,8 @@
 .weather {
+  display: flex;
+  color: var(--white);
+  i {
     color: var(--white);
-    i {
-      color: var(--white);
-      font-size: 16px;
-    }
+    font-size: 16px;
   }
+}
