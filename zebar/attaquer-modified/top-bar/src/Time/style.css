@@ -1,6 +1,6 @@
 .date {
   padding: 0 3px;
-  padding-left: 6px;
+  padding-left: 5px;
   width: 3.2rem;
   color: var(--white);
   white-space: nowrap;
@@ -10,7 +10,5 @@
   }
 }
 .date img {
-  /* width: 17px; */
-  /* height: 17px; */
   display: none;
 }

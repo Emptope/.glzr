@@ -1,7 +1,7 @@
 .input-method {
   display: inline-block;
   border-radius: 4px;
-  padding: 0.2rem 0.5rem 0.5rem 0.3rem;
+  padding: 0 0.5rem;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;

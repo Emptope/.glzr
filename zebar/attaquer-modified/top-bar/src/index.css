@@ -240,9 +240,17 @@ img {
   text-rendering: optimizeLegibility;
 }
 
-.right,
-.right * {
+.right > * {
+  display: flex;
+  align-items: center;
+  height: 22px;
   text-shadow: none !important;
+}
+
+.right button {
+  height: 22px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* usage */
