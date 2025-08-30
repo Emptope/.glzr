@@ -1,0 +1,26 @@
+.input-method {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem 0.5rem 0.3rem;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.input-method:hover {
+  animation: hoverbutton 0.1s ease forwards;
+  -webkit-animation: hoverbutton 0.1s ease forwards;
+}
+
+.input-method .label {
+  text-align: center;
+}
+
+.input-method.clicked-animated .content {
+  animation: appear 0.2s ease;
+  -webkit-animation: appear 0.2s ease;
+  -moz-animation: appear 0.2s ease;
+  -ms-animation: appear 0.2s ease;
+  -o-animation: appear 0.2s ease;
+}

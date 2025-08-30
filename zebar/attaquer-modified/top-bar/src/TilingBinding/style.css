@@ -1,0 +1,26 @@
+.toggle-tiling-direction {
+  width: 24px;
+  justify-content: center;
+}
+
+.tiling-direction {
+  padding-top: 1px;
+  text-indent: -2px;
+  font-size: 13px;
+}
+
+.horizontal {
+  span {
+    animation: clockwise 0.2s ease-in-out forwards;
+  }
+}
+
+.vertical {
+  span {
+    animation: anticlockwise 0.2s ease-in-out forwards;
+  }
+}
+
+.binding-mode {
+  margin-right: 4px;
+}

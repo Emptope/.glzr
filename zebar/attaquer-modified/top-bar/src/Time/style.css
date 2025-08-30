@@ -1,0 +1,16 @@
+.date {
+  padding: 0 3px;
+  padding-left: 6px;
+  width: 3.2rem;
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  &.clicked-animated .content {
+    animation: appear 0.2s ease;
+  }
+}
+.date img {
+  /* width: 17px; */
+  /* height: 17px; */
+  display: none;
+}
