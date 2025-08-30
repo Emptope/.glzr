@@ -1,14 +1,19 @@
 .cpu {
   /* width: 3.1rem; */
   /* height: 22px; */
-  display: inline-block;
+  display: flex;           
+  align-items: center;        
+  justify-content: center;    
   border-radius: 4px;
-  padding: 0.2rem 0.3rem 0.2rem 0.2rem;
+  padding: 0 3px;             
+  margin: 0 1px 0 0;          
+  height: 22px;               
   /* gap: 1.5rem; */
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
+  cursor: pointer;
   &:hover {
     animation: hoverbutton 0.1s ease forwards;
     -webkit-animation: hoverbutton 0.1s ease forwards;
@@ -17,15 +22,18 @@
 
 .i-cpu {
   font-size: 13px;
-  width: 1rem;
-  /* width: 14px; */
+  width: 14px;              
+  display: inline-block;     
+  line-height: 1;            
+  margin-right: 5px;         
 }
 
 .cpu-bar {
+  display: flex;             
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 1.8rem;
+  min-width: 1.8rem;         
 }
 
 .cpu.clicked-animated .content {
@@ -47,7 +55,6 @@ button {
   border: none;
   background: none;
   border-radius: 4px;
-  /* animation: unhoverbutton 0.1s ease forwards; */
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
