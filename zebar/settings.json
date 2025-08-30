@@ -1,0 +1,20 @@
+{
+  "$schema": "https://github.com/glzr-io/zebar/raw/v3.1.0/resources/settings-schema.json",
+  "startupConfigs": [
+    {
+      "pack": "attaquer-modified",
+      "widget": "top-bar",
+      "preset": "default"
+    },
+    {
+      "pack": "attaquer",
+      "widget": "top-bar",
+      "preset": "1080p"
+    },
+    {
+      "pack": "attaquer",
+      "widget": "top-bar",
+      "preset": "1440p"
+    }
+  ]
+}
