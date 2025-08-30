@@ -138,7 +138,19 @@
 
 body {
   color: rgb(255 255 255 / 90%);
-  font-family: "NotoSansM Nerd Font", "CaskaydiaMonoNerdFont Locally", ui-monospace, monospace;
+  font-family: "NotoSansM Nerd Font",
+               "Noto Sans",
+               "CaskaydiaMonoNerdFont Locally",
+               "JetBrains Mono",
+               "Consolas",
+               "Segoe UI",
+               "Inter",
+               "Microsoft YaHei UI",
+               "PingFang SC",
+               "Noto Sans SC",
+               "Source Han Sans SC",
+               ui-monospace,
+               monospace;
   font-size: 13px;
   overflow: hidden;
 }
