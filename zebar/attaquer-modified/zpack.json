@@ -1,13 +1,13 @@
 {
   "$schema": "https://github.com/glzr-io/zebar/raw/v3.1.1/resources/zpack-schema.json",
   "name": "attaquer-modified",
-  "version": "0.0.0",
-  "description": "Personal version of attaquer top-bar",
+  "version": "0.1.0",
+  "description": "Modifiction of attaquer theme",
   "tags": [],
   "previewImages": [
-    "./resources/preview-image-1.png"
+    "resources\\preview-image-1.png"
   ],
-  "repositoryUrl": "",
+  "repositoryUrl": "https://github.com/Emptope/.glzr",
   "widgets": [
     {
       "name": "top-bar",
