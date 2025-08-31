@@ -35,6 +35,10 @@
             "argsRegex": ""
           },
           {
+            "program": "taskmgr",
+            "argsRegex": ""
+          },
+          {
             "program": "C:\\Program Files\\Mem Reduct\\memreduct.exe",
             "argsRegex": ""
           }
