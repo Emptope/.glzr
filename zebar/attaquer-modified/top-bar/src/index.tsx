@@ -21,17 +21,17 @@ import BatteryStatus from "./BatteryStatus/BatteryStatus";
 import TimeStatus from "./Time/TimeStatus";
 
 const providers = zebar.createProviderGroup({
-  glazewm: { type: "glazewm" },
-  cpu: { type: "cpu", refreshInterval: 3000 },
+  glazewm: { type: "glazewm"},
+  keyboard: { type: "keyboard" },
+  cpu: { type: "cpu", refreshInterval: 5000 },
   memory: { type: "memory", refreshInterval: 5000 },
   weather: { type: "weather" },
-  network: { type: "network", refreshInterval: 1000 },
+  network: { type: "network", refreshInterval: 5000 },
+  // audio: { type: "audio" },
   battery: { type: "battery", refreshInterval: 10000 },
   date: { type: "date", formatting: "HH:mm ccc d LLLL y" },
   media: { type: "media" },
-  audio: { type: "audio" },
   systray: { type: "systray" },
-  keyboard: { type: "keyboard" },
 });
 
 render(() => <App />, document.getElementById("root")!);
@@ -51,17 +51,17 @@ function App() {
         <MediaStatus media={output.media} />
       </div>
       <div class="center">
-        <CurrentApps glazewm={output.glazewm} />
+        {/* <CurrentApps glazewm={output.glazewm} /> */}
+        <WindowTitle glazewm={output.glazewm} />
       </div>
       <div class="right">
         <Systray systray={output.systray} glazewm={output.glazewm} />
-        {/* Insert InputMethodStatus between Systray and CpuStatus */}
         <InputMethodStatus glazewm={output.glazewm} keyboard={output.keyboard} />
         <CpuStatus cpu={output.cpu} glazewm={output.glazewm} />
         <MemoryStatus memory={output.memory} />
         {output.weather && <WeatherStatus weather={output.weather} />}
         <NetworkStatus network={output.network} glazewm={output.glazewm} />
-        <VolumeStatus audio={output.audio} glazewm={output.glazewm} />
+        {/* <VolumeStatus audio={output.audio} glazewm={output.glazewm} /> */}
         <BatteryStatus battery={output.battery} />
         <TimeStatus date={output.date} glazewm={output.glazewm} />
       </div>
