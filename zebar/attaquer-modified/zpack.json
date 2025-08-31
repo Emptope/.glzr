@@ -2,10 +2,10 @@
   "$schema": "https://github.com/glzr-io/zebar/raw/v3.1.1/resources/zpack-schema.json",
   "name": "attaquer-modified",
   "version": "0.1.0",
-  "description": "Modifiction of attaquer theme",
-  "tags": [],
+  "description": "A modified version of attaquer theme (https://github.com/iAttaquer/.glzr).",
+  "tags": ["simple"],
   "previewImages": [
-    "resources\\preview-image-1.png"
+    "resources\\preview-image.png"
   ],
   "repositoryUrl": "https://github.com/Emptope/.glzr",
   "widgets": [
@@ -32,10 +32,6 @@
           },
           {
             "program": "C:\\Program Files\\SystemInformer\\SystemInformer.exe",
-            "argsRegex": ""
-          },
-          {
-            "program": "taskmgr",
             "argsRegex": ""
           },
           {
