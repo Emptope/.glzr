@@ -1,5 +1,0 @@
-[2m2025-08-08T05:49:34.612398Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[49].commands: unrecognized subcommand
- at line 324 column 15
-[2m2025-08-08T05:50:14.128100Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[49].commands: invalid type: string "exec explorer", expected a sequence at line 324 column 15
-[2m2025-08-08T05:51:35.279308Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m duplicate field `keybindings`
-[2m2025-08-10T07:33:27.784324Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.

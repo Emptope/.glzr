@@ -1,8 +1,6 @@
 .network {
   display: flex;
   color: var(--white);
-  padding: 0 5px 0 5px;
-
   &.clicked-animated .content {
     animation: appear 0.2s ease;
   }
@@ -28,8 +26,16 @@
   } */
 }
 .i-wifi {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin: 0 4px 2px 4px;
   filter: brightness(0) invert(1);
 }
 .i-eth {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
   filter: brightness(0) invert(1);
 }

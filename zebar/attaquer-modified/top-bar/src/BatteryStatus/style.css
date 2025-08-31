@@ -6,5 +6,5 @@
   width: 25px;
   height: 25px;
   filter: brightness(0) invert(1);
-  padding-right: 5px;
+  margin: 2px 4px 0 0;
 }
