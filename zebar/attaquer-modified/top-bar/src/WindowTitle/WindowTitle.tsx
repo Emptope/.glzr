@@ -1,5 +1,5 @@
 import "./style.css";
-import { Component } from "solid-js";
+import { Component, createMemo, Show } from "solid-js";
 import { GlazeWmOutput } from "zebar";
 
 interface WindowTitleProps {
@@ -7,21 +7,28 @@ interface WindowTitleProps {
 }
 
 const WindowTitle: Component<WindowTitleProps> = (props) => {
+  const focusedWindowTitle = createMemo(() => {
+    const focusedWorkspace = props.glazewm?.focusedWorkspace;
+    if (!focusedWorkspace?.children) return null;
+
+    const focusedWindow = focusedWorkspace.children.find(
+      (item) => "title" in item && item.hasFocus
+    );
+
+    if (!focusedWindow || !("title" in focusedWindow) || !focusedWindow.title) {
+      return null;
+    }
+
+    const title = focusedWindow.title;
+    return title.length > 90 ? `${title.slice(0, 90)}...` : title;
+  });
+
   return (
-    <>
-      {props.glazewm?.focusedWorkspace.children.map(
-        (item) =>
-          "title" in item &&
-          item.hasFocus && (
-            <div class="current-window">
-              {item.title &&
-                (item.title.length > 90
-                  ? item.title.slice(0, 90) + "..."
-                  : item.title)}
-            </div>
-          ),
-      )}
-    </>
+    <Show when={focusedWindowTitle()}>
+      <div class="current-window">
+        {focusedWindowTitle()}
+      </div>
+    </Show>
   );
 };
 
