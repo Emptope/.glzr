@@ -25,13 +25,13 @@ const providers = zebar.createProviderGroup({
   cpu: { type: "cpu", refreshInterval: 3000 },
   memory: { type: "memory", refreshInterval: 5000 },
   weather: { type: "weather" },
-  network: { type: "network", refreshInterval: 2000 },
+  network: { type: "network", refreshInterval: 1000 },
   battery: { type: "battery", refreshInterval: 10000 },
   date: { type: "date", formatting: "HH:mm ccc d LLLL y" },
   media: { type: "media" },
   audio: { type: "audio" },
   systray: { type: "systray" },
-  keyboard: { type: "keyboard" }, // add keyboard provider
+  keyboard: { type: "keyboard" },
 });
 
 render(() => <App />, document.getElementById("root")!);
