@@ -65,28 +65,6 @@ const WifiIcons: Component<{
   );
 };
 
-function getNetworkIconSrc(network?: NetworkOutput): string {
-  const type = network?.defaultInterface?.type;
-  
-  if (type === "ethernet") {
-    return ICON_BASE + ICONS.ethernet;
-  }
-  
-  if (type === "wifi") {
-    const isConnected = network?.defaultGateway !== null && network?.defaultGateway !== undefined;
-    if (!isConnected) {
-      return "";
-    }
-    return "";
-  }
-  
-  return ICON_BASE + ICONS.noNetwork;
-}
-
-function getNetworkIconClass(network?: NetworkOutput): string {
-  return network?.defaultInterface?.type === "wifi" ? "i-wifi" : "i-eth";
-}
-
 const NetworkStatus: Component<NetworkStatusProps> = (props) => {
   const { isActive, handleClick } = useAnimatedClick();
 
@@ -97,17 +75,52 @@ const NetworkStatus: Component<NetworkStatusProps> = (props) => {
     );
   };
 
-  const iconSrc = createMemo(() => getNetworkIconSrc(props.network));
-  const iconClass = createMemo(() => getNetworkIconClass(props.network));
   const isWifi = createMemo(
     () => props.network?.defaultInterface?.type === "wifi"
   );
+  
   const isWifiConnected = createMemo(
     () => isWifi() && props.network?.defaultGateway !== null && props.network?.defaultGateway !== undefined
   );
+  
   const wifiStrength = createMemo(
     () => props.network?.defaultGateway?.signalStrength
   );
+
+  const getNetworkIcon = () => {
+    const networkType = props.network?.defaultInterface?.type;
+    
+    switch (networkType) {
+      case "ethernet":
+        return (
+          <img
+            src={ICON_BASE + ICONS.ethernet}
+            class="i-eth"
+            width="16"
+            height="16"
+            alt="Ethernet"
+          />
+        );
+      case "wifi":
+        return (
+          <WifiIcons 
+            signalStrength={wifiStrength()} 
+            isConnected={isWifiConnected()}
+            class="i-wifi" 
+          />
+        );
+      default:
+        return (
+          <img
+            src={ICON_BASE + ICONS.noNetwork}
+            class="i-eth"
+            width="16"
+            height="16"
+            alt="No network"
+          />
+        );
+    }
+  };
 
   return (
     <button
@@ -115,21 +128,7 @@ const NetworkStatus: Component<NetworkStatusProps> = (props) => {
       onClick={handleOpenActionCenterClick}
     >
       <span class="content">
-        {isWifi() ? (
-          <WifiIcons 
-            signalStrength={wifiStrength()} 
-            isConnected={isWifiConnected()}
-            class={iconClass()} 
-          />
-        ) : (
-          <img
-            src={iconSrc()}
-            class={iconClass()}
-            width="16"
-            height="16"
-            alt="Network status"
-          />
-        )}
+        {getNetworkIcon()}
         <div class="labels">
           <span class="label">
             <span class="ii"></span>

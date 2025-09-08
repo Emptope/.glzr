@@ -21,12 +21,12 @@ import BatteryStatus from "./BatteryStatus/BatteryStatus";
 import TimeStatus from "./Time/TimeStatus";
 
 const providers = zebar.createProviderGroup({
-  glazewm: { type: "glazewm"},
+  glazewm: { type: "glazewm" },
   keyboard: { type: "keyboard" },
   cpu: { type: "cpu", refreshInterval: 5000 },
   memory: { type: "memory", refreshInterval: 5000 },
   weather: { type: "weather" },
-  network: { type: "network", refreshInterval: 5000 },
+  network: { type: "network", refreshInterval: 1000 },
   // audio: { type: "audio" },
   battery: { type: "battery", refreshInterval: 10000 },
   date: { type: "date", formatting: "HH:mm ccc d LLLL y" },
