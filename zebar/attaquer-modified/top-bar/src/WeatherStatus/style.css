@@ -1,6 +1,9 @@
 .weather {
-  display: flex;
   color: var(--white);
+  display: flex;
+  width: 3.6rem;
+  align-items: center;
+  justify-content: center;
   i {
     color: var(--white);
     font-size: 16px;
