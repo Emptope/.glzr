@@ -1,7 +1,8 @@
 .input-method {
   display: flex;
+  padding: 0 6px;
+  margin: 0 6px;
   border-radius: 4px;
-  padding: 0 0.5rem;
   align-items: center;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;

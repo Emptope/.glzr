@@ -1,5 +1,8 @@
 .network {
   display: flex;
+  width: 24px;
+  margin: 0 6px;
+  justify-content: center;
   color: var(--white);
   &.clicked-animated .content {
     animation: appear 0.2s ease;
@@ -9,32 +12,32 @@
     font-size: 7px;
     width: 0;
   }
-  /* .labels { */
-  /*   width: 3rem; */
-  /*   display: flex; */
-  /*   flex-direction: column; */
-  /* } */
+  .labels { 
+    width: 0rem;
+    display: flex;
+    flex-direction: column; 
+   } 
   .label {
     display: none;
     gap: 3px;
     justify-content: space-between;
     font-size: 8px;
   }
-  /* .net-line {
+  .net-line {
     width: 2.7rem;
     justify-content: end;
-  } */
+  }
 }
 .i-wifi {
   display: flex;
   width: 16px;
   height: 16px;
-  margin: 0 4px 2px 4px;
+  margin: 0 6px;
 }
 .i-eth {
   display: flex;
   width: 16px;
   height: 16px;
-  margin: 0 4px;
+  margin: 0 6px;
   filter: brightness(0) invert(1);
 }

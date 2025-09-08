@@ -1,14 +1,10 @@
 .cpu {
-  /* width: 3.1rem; */
-  /* height: 22px; */
   display: flex;           
+  padding: 0 2px;
+  margin: 0 2px;
   align-items: center;        
   justify-content: center;    
   border-radius: 4px;
-  padding: 0 3px;             
-  margin: 0 1px 0 0;          
-  height: 22px;               
-  /* gap: 1.5rem; */
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -21,11 +17,12 @@
 }
 
 .i-cpu {
-  font-size: 13px;
-  width: 14px;              
+  font-size: 14px;
+  width: 16px;              
+  height: 16px;
+  padding: 2px 0;
   display: inline-block;     
   line-height: 1;            
-  margin-right: 5px;         
 }
 
 .cpu-bar {
@@ -42,26 +39,4 @@
   -moz-animation: appear 0.2s ease;
   -ms-animation: appear 0.2s ease;
   -o-animation: appear 0.2s ease;
-}
-
-button {
-  display: flex;
-  align-items: center;
-  text-shadow: 0 0 2px black;
-  margin: 0 1px 0 0;
-  padding: 0 3px 0 3px;
-  height: 22px;
-  color: #fff;
-  border: none;
-  background: none;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-}
-
-button:hover {
-  animation: hoverbutton 0.1s ease forwards;
-  -webkit-animation: hoverbutton 0.1s ease forwards;
 }

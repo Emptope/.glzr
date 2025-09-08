@@ -1,7 +1,3 @@
-/**
-* Import the Nerdfonts icon font.
-* Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
-*/
 @import "https://www.nerdfonts.com/assets/css/webfont.css";
 
 :root {
@@ -21,12 +17,12 @@
   --windows-color: #3a86ff;
 }
 
-/* @font-face {
+@font-face {
   font-family: "CaskaydiaMonoNerdFont Locally";
   src: url("./fonts/CaskaydiaMonoNerdFont-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-} */
+}
 
 @font-face {
   font-family: "NotoSansM Nerd Font Locally";
@@ -180,26 +176,26 @@ span {
 }
 button {
   display: flex;
+  padding: 0;
+  width: 24px;
+  height: 24px;
   align-items: center;
-  /* text-shadow: 0 0 2px black; */
-  /* margin: 0 1px 0 0; */
-  padding: 0 3px 0 3px;
+  margin: 0 2px;
   height: 90%;
   color: #fff;
   border: none;
   background: none;
   border-radius: 4px;
-  /* animation: unhoverbutton 0.1s ease forwards; */
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-  /* &:active {
+  &:active {
     .content {
       animation: appear 0.2s ease;
       -webkit-animation: appear 0.2s ease;
     }
-  } */
+  }
 }
 button:hover {
   animation: hoverbutton 0.1s ease forwards;
@@ -217,8 +213,6 @@ img {
   align-items: center;
   color: #fff;
   height: 100%;
-  /* height: 32px; */
-  /* padding: 0 0 6px 0; */
 }
 
 .template {
@@ -258,17 +252,10 @@ img {
 .right > * {
   display: flex;
   align-items: center;
-  height: 22px;
+  height: 24px;
   text-shadow: none !important;
 }
 
-.right button {
-  height: 22px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-/* usage */
 .low-usage {
   color: var(--white);
 }
