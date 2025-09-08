@@ -1,6 +1,6 @@
 {
-  "name": "solidjs-ts",
-  "version": "0.0.0",
+  "name": "attaquer-modified-solidjs-ts",
+  "version": "0.1.2",
   "description": "",
   "scripts": {
     "build": "vite build",
