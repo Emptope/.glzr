@@ -12,8 +12,8 @@ interface NetworkStatusProps {
 const ICON_BASE = "./assets/icons/";
 /** Icon file names for different network states/levels */
 const ICONS = {
-  ethernet: "icons8-wired-network-32.png",
-  noNetwork: "icons8-no-network-32.png",
+  ethernet: "wired-network-32.png",
+  noNetwork: "no-network-32.png",
 } as const;
 
 /**
@@ -21,12 +21,14 @@ const ICONS = {
  * Based on the provided SVG design with signal strength thresholds:
  * 0-4: all bars dim
  * 5-44: only innermost bar lit
- * 45-74: inner and middle bars lit  
+ * 45-74: inner and middle bars lit
  * 75-100: all bars lit
  */
-const WifiSvgIcon: Component<{ signalStrength?: number; class?: string }> = (props) => {
+const WifiSvgIcon: Component<{ signalStrength?: number; class?: string }> = (
+  props
+) => {
   const strength = props.signalStrength ?? 0;
-  
+
   // Determine which bars should be lit based on signal strength
   const getBarOpacity = (barIndex: number): number => {
     if (strength >= 75) return 1; // All bars lit (75-100)
@@ -111,8 +113,12 @@ const NetworkStatus: Component<NetworkStatusProps> = (props) => {
    */
   const iconSrc = createMemo(() => getNetworkIconSrc(props.network));
   const iconClass = createMemo(() => getNetworkIconClass(props.network));
-  const isWifi = createMemo(() => props.network?.defaultInterface?.type === "wifi");
-  const wifiStrength = createMemo(() => props.network?.defaultGateway?.signalStrength);
+  const isWifi = createMemo(
+    () => props.network?.defaultInterface?.type === "wifi"
+  );
+  const wifiStrength = createMemo(
+    () => props.network?.defaultGateway?.signalStrength
+  );
 
   return (
     <button

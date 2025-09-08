@@ -34,44 +34,20 @@ const VolumeStatus: Component<VolumeStatusProps> = (props) => {
   const handleVolumeClick = () => {
     handleClick();
     props.glazewm.runCommand(
-      "shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/OpenSoundOutput.ahk",
+      "shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/OpenSoundOutput.ahk"
     );
   };
 
   const VolumeIcon = () => {
     const vol = volume();
     if (vol > 80) {
-      return (
-        <img
-          src="./assets/icons/icons8-audio-3-32.png"
-          height={23}
-          width={23}
-        />
-      );
+      return <img src="./assets/icons/audio-3-32.png" height={23} width={23} />;
     } else if (vol > 40) {
-      return (
-        <img
-          src="./assets/icons/icons8-audio-2-32.png"
-          height={23}
-          width={23}
-        />
-      );
+      return <img src="./assets/icons/audio-2-32.png" height={23} width={23} />;
     } else if (vol > 0) {
-      return (
-        <img
-          src="./assets/icons/icons8-audio-1-32.png"
-          height={23}
-          width={23}
-        />
-      );
+      return <img src="./assets/icons/audio-1-32.png" height={23} width={23} />;
     } else {
-      return (
-        <img
-          src="./assets/icons/icons8-audio-0-32.png"
-          height={23}
-          width={23}
-        />
-      );
+      return <img src="./assets/icons/audio-0-32.png" height={23} width={23} />;
     }
   };
   return (

@@ -22,17 +22,7 @@ const MediaStatus: Component<MediaStatusProps> = (props) => {
 
   const MediaIcons = {
     media: (
-      <img
-        src="./assets/icons/icons8-musical-note-32.png"
-        height={23}
-        width={23}
-      />
-    ),
-    Brave: (
-      <img src="./assets/icons/icons8-brave-32.png" height={23} width={23} />
-    ),
-    "Spotify.exe": (
-      <img src="./assets/icons/icons8-spotify-32.png" height={23} width={23} />
+      <img src="./assets/icons/musical-note-32.png" height={23} width={23} />
     ),
   };
 

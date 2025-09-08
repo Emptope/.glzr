@@ -3,6 +3,7 @@ import { Component } from "solid-js";
 import { GlazeWmOutput } from "zebar";
 import { Window } from "glazewm";
 import { useAnimatedClick } from "../hooks/useAnimatedClick";
+import { ICON_MAP, ICON_BASE, DEFAULT_ICON_FILE } from "./IconConfig";
 
 interface ApplicationProps {
   glazewm: GlazeWmOutput;
@@ -17,66 +18,34 @@ interface ApplicationProps {
  * @returns A normalized, lowercased, trimmed process key.
  */
 function normalizeProcessName(name: string): string {
-  return (name ?? "").toLowerCase().trim();
+  if (!name) return "";
+  
+  let normalized = name.toLowerCase().trim();
+  
+  // Remove file extensions
+  normalized = normalized.replace(/\.(exe|msi|app|dmg|pkg)$/i, "");
+  
+  // Remove content in parentheses (version info, architecture, etc.)
+  // Handles both regular parentheses and full-width parentheses
+  normalized = normalized.replace(/[\(（][^\)）]*[\)）]/g, "");
+  
+  // Remove content in square brackets
+  normalized = normalized.replace(/\[[^\]]*\]/g, "");
+  
+  // Remove version numbers (e.g., "v1.0", "2023", "64bit", "32bit")
+  normalized = normalized.replace(/\b(v?\d+(\.\d+)*|\d{4}|64bit|32bit|x64|x86)\b/g, "");
+  
+  // Remove common suffixes and prefixes
+  normalized = normalized.replace(/\b(setup|installer|portable|final|release|beta|alpha|pro|premium|free|trial)\b/g, "");
+  
+  // Remove special characters and replace with spaces
+  normalized = normalized.replace(/[_\-\.\+\&\#\@\!\%\^\*\=\|\\\/<>\?\:;"'`~]/g, " ");
+  
+  // Remove extra spaces and trim
+  normalized = normalized.replace(/\s+/g, " ").trim();
+  
+  return normalized;
 }
-
-/**
- * Centralized icon registry: process name (normalized) -> icon file name.
- * To add a new icon, append a new entry here with the normalized process name as the key.
- */
-const ICON_MAP: Record<string, string> = {
-  "7zfm": "icons8-7zip-32.png",
-  "clash for windows": "Clash-32.png",
-  "docker desktop": "icons8-docker-32.png",
-  "feather launcher": "Feather-Launcher-32.png",
-  "universal x86 tuning utility": "Universal-x86-Tuning-Utility-32.png",
-  applicationframehost: "icons8-settings-32.png",
-  autohotkeyux: "AutoHotkeyUX-32.png",
-  brave: "icons8-brave-32.png",
-  chrome: "chrome-32.png",
-  cloudmusic: "cloudmusic-32.png",
-  code: "icons8-visual-studio-code-32.png",
-  cursor: "cursor.png",
-  devenv: "icons8-visual-studio-32.png",
-  discord: "icons8-discord-new-32.png",
-  dnplayer: "LDPlayer-9-32.png",
-  everything: "Everything-32.png",
-  explorer: "icons8-file-explorer-new-32.png",
-  fanspeedsetting: "icons8-fan-32.png",
-  firefox: "Firefox-32.png",
-  geogebracalculator: "GeoGebraCalculator-32.png",
-  ghelper: "GHelper-32.png",
-  happ: "happ-32.png",
-  matlab: "matlab-32.png",
-  medibangpaintpro: "icons8-medibang-paint-32.png",
-  messenger: "icons8-facebook-messenger-32.png",
-  msedgewebview2: "icons8-edge-32.png",
-  obs64: "icons8-obs-32.png",
-  obsidian: "Obsidian-32.png",
-  okular: "okular-32.png",
-  origin64: "Origin64-32.png",
-  postman: "Postman-32.png",
-  qq: "QQ-32.png",
-  rider64: "rider64-32.png",
-  signal: "Signal-32.png",
-  spotify: "icons8-spotify-32.png",
-  steamwebhelper: "icons8-steam-32.png",
-  sublime_text: "icons8-sublime-text-32.png",
-  systeminformer: "systeminformer-32x32.png",
-  taskmgr: "Taskmgr-32.png",
-  trae: "Trae-32.png",
-  virtualbox: "VirtualBox-32.png",
-  vmware: "VMware-Workstation-Pro-32.png",
-  weixin: "Weixin-32.png",
-  windhawk: "windhawk-32.png",
-  windowsterminal: "icons8-terminal-32.png",
-  zed: "zed.png",
-};
-
-/** Base folder for icons (relative to this component's bundle output). */
-const ICON_BASE = "./assets/icons/";
-/** Default icon file name when no mapping is found. */
-const DEFAULT_ICON_FILE = "icons8-application-32.png";
 
 /**
  * Resolve the icon src for a given process name with a safe default.

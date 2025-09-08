@@ -1,4 +1,4 @@
-import "./style.css"
+import "./style.css";
 import { Component, createMemo } from "solid-js";
 import { BatteryOutput } from "zebar";
 
@@ -10,13 +10,13 @@ interface BatteryStatusProps {
 const ICON_BASE = "./assets/icons/";
 /** Icon file names used for different battery states/levels */
 const ICONS = {
-  full: "icons8-battery-max-charged-32.png",
-  charging: "icons8-battery-charging-32.png",
-  discharging4: "icons8-battery-4-32.png",
-  discharging3: "icons8-battery-3-32.png",
-  discharging2: "icons8-battery-2-32.png",
-  discharging1: "icons8-battery-1-32.png",
-  discharging0: "icons8-battery-32.png",
+  full: "battery-max-charged-32.png",
+  charging: "battery-charging-32.png",
+  discharging4: "battery-4-32.png",
+  discharging3: "battery-3-32.png",
+  discharging2: "battery-2-32.png",
+  discharging1: "battery-1-32.png",
+  discharging0: "battery-32.png",
 } as const;
 
 /**
@@ -103,7 +103,9 @@ const BatteryStatus: Component<BatteryStatusProps> = (props) => {
    */
   const titleText = createMemo(() => formatBatteryTime(props.battery));
   const iconSrc = createMemo(() => getBatteryIconSrc(props.battery));
-  const percent = createMemo(() => Math.round(props.battery?.chargePercent ?? 0));
+  const percent = createMemo(() =>
+    Math.round(props.battery?.chargePercent ?? 0)
+  );
 
   return (
     <div

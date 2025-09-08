@@ -13,7 +13,7 @@ const SearchButton: Component<SearchButtonProps> = (props) => {
   const handleSearchClick = () => {
     handleClick();
     props.glazewm.runCommand(
-      "shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/OpenWindowsSearch.ahk",
+      "shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/OpenWindowsSearch.ahk"
     );
   };
   return (
@@ -22,11 +22,7 @@ const SearchButton: Component<SearchButtonProps> = (props) => {
       onclick={handleSearchClick}
     >
       <span class="content">
-        <img
-          src="./assets/icons/icons8-search-32.png"
-          width="19"
-          height="19"
-        ></img>
+        <img src="./assets/icons/search-32.png" width="19" height="19"></img>
       </span>
     </button>
   );

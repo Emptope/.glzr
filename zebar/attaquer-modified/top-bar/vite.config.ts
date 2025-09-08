@@ -7,6 +7,7 @@ export default defineConfig({
     copy({
       targets: [
         {src: 'src/icons/*', dest: './dist/assets/icons' },
+        {src: 'src/CurrentApps/AppIcons/*', dest: './dist/assets/icons' },
         {src: 'src/scripts/*', dest: './dist/assets/scripts' }
       ],
       verbose: true,

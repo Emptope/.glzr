@@ -16,7 +16,7 @@ const TimeStatus: Component<TimeStatusProps> = (props) => {
   const handleTimeClick = () => {
     handleClick();
     props.glazewm.runCommand(
-      "shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/OpenNotificationCenter.ahk",
+      "shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/OpenNotificationCenter.ahk"
     );
   };
 
@@ -27,7 +27,7 @@ const TimeStatus: Component<TimeStatusProps> = (props) => {
       onClick={handleTimeClick}
     >
       <span class="content">
-        <img src="./assets/icons/icons8-time-32.png"></img>
+        <img src="./assets/icons/time-32.png"></img>
         <span class="time">{props.date?.formatted.substring(0, 5)}</span>
       </span>
     </button>

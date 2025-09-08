@@ -21,17 +21,7 @@ const Workspace: Component<WorkspaceProps> = (props) => {
       id={props.workspace.name}
     >
       <span class="workspace-icon">
-        {props.workspace.name === "web" ? (
-          <img
-            src="./assets/icons/icons8-brave-web-browser-32.png"
-            alt="5"
-            class="i-brave"
-            height="16"
-            width="16"
-          ></img>
-        ) : (
-          (props.workspace.displayName ?? props.workspace.name)
-        )}
+        {props.workspace.displayName ?? props.workspace.name}
       </span>
     </button>
   );
