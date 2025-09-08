@@ -1,6 +1,5 @@
 .date {
   display: flex;
-  margin: 0 4px;
   width: 3.2rem;
   color: var(--white);
   white-space: nowrap;

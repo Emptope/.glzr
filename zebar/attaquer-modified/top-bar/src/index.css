@@ -180,8 +180,8 @@ button {
   width: 24px;
   height: 24px;
   align-items: center;
+  justify-content: center;
   margin: 0 2px;
-  height: 90%;
   color: #fff;
   border: none;
   background: none;
