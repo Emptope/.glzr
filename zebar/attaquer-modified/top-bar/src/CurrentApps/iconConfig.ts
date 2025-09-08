@@ -34,6 +34,7 @@ export const ICON_MAP: Record<string, string> = {
   taskmgr: "Taskmgr-32.png",
   trae: "Trae-32.png",
   virtualbox: "VirtualBox-32.png",
+  visio: "VISIO-32.png",
   vmware: "VMware-Workstation-Pro-32.png",
   weixin: "Weixin-32.png",
   windhawk: "Windhawk-32.png",
