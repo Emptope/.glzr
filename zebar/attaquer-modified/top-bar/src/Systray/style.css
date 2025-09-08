@@ -2,18 +2,16 @@
   display: flex;
   align-items: center;
   gap: 1px;
-  margin: 0 2px 0 2px;
   user-select: none;
 }
 
 .systray-toggle {
-  /* background: #aeaeae33; */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-radius: 4px;
 }
 
@@ -30,8 +28,8 @@
 }
 
 .expand-icon {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 }
 
 .systray-toggle .content {
@@ -51,7 +49,7 @@
 .systray {
   display: flex;
   align-items: center;
-  gap: 1px;
+  gap: 2px;
   overflow: hidden;
   max-width: 0;
   transition: max-width 0.4s ease-out;
@@ -70,8 +68,8 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 4px;
 }
 
