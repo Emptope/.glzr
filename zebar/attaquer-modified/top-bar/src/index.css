@@ -21,9 +21,16 @@
   --windows-color: #3a86ff;
 }
 
-@font-face {
+/* @font-face {
   font-family: "CaskaydiaMonoNerdFont Locally";
   src: url("./fonts/CaskaydiaMonoNerdFont-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "NotoSansM Nerd Font Locally";
+  src: url("./fonts/NotoSansMNerdFont-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -138,16 +145,12 @@
 
 body {
   color: rgb(255 255 255 / 90%);
-  font-family: "NotoSansM Nerd Font",
-               "Noto Sans",
+  font-family: "NotoSansM Nerd Font Locally",
                "CaskaydiaMonoNerdFont Locally",
-               "JetBrains Mono",
                "Consolas",
                "Segoe UI",
-               "Inter",
                "Microsoft YaHei UI",
                "PingFang SC",
-               "Noto Sans SC",
                "Source Han Sans SC",
                ui-monospace,
                monospace;
