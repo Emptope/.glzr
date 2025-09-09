@@ -22,16 +22,16 @@ import TimeStatus from "./Time/TimeStatus";
 
 const providers = zebar.createProviderGroup({
   glazewm: { type: "glazewm" },
+  systray: { type: "systray" },
   keyboard: { type: "keyboard" },
   cpu: { type: "cpu", refreshInterval: 5000 },
   memory: { type: "memory", refreshInterval: 5000 },
   weather: { type: "weather" },
-  network: { type: "network", refreshInterval: 1000 },
+  network: { type: "network", refreshInterval: 2000 },
   // audio: { type: "audio" },
   battery: { type: "battery", refreshInterval: 10000 },
   date: { type: "date", formatting: "HH:mm ccc d LLLL y" },
   media: { type: "media" },
-  systray: { type: "systray" },
 });
 
 render(() => <App />, document.getElementById("root")!);

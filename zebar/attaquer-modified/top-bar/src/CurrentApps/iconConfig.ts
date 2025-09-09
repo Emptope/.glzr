@@ -14,7 +14,7 @@ export const ICON_MAP: Record<string, string> = {
   cloudmusic: "cloudmusic-32.png",
   code: "Visual-Studio-Code-32.png",
   controlpanel: "control-panel-32.png",
-  cursor: "cursor.png",
+  cursor: "cursor-32.png",
   devenv: "Visual-Studio-32.png",
   everything: "Everything-32.png",
   excel: "EXCEL-32.png",
