@@ -1,11 +1,8 @@
 .logo {
   display: flex;
-  align-items: center;
-  color: var(--white);
   width: 24px;
   height: 24px;
   font-size: 16px;
-  justify-content: center;
   &.clicked-animated .content {
     animation: appear 0.2s ease;
   }

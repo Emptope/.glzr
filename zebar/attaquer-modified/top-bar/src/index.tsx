@@ -45,7 +45,7 @@ function App() {
     <div class="app">
       <div class="left">
         <WindowsButton glazewm={output.glazewm} />
-        <SearchButton glazewm={output.glazewm} />
+        {/* <SearchButton glazewm={output.glazewm} /> */}
         <Workspaces glazewm={output.glazewm} />
         <TilingBinding glazewm={output.glazewm} />
         <MediaStatus media={output.media} />
