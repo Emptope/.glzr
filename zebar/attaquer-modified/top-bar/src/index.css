@@ -143,11 +143,8 @@ body {
   color: rgb(255 255 255 / 90%);
   font-family: "NotoSansM Nerd Font Locally",
                "CaskaydiaMonoNerdFont Locally",
-               "Consolas",
                "Segoe UI",
                "Microsoft YaHei UI",
-               "PingFang SC",
-               "Source Han Sans SC",
                ui-monospace,
                monospace;
   font-size: 13px;
@@ -165,7 +162,6 @@ body {
 }
 
 i {
-  color: rgb(115 130 175 / 95%);
   margin-right: 5px;
 }
 
