@@ -3,7 +3,9 @@
   "name": "attaquer-modified",
   "version": "0.2.0",
   "description": "A modified version of attaquer theme (https://github.com/iAttaquer/.glzr).",
-  "tags": ["simple"],
+  "tags": [
+    "simple"
+  ],
   "previewImages": [
     "resources\\preview-image.png"
   ],
