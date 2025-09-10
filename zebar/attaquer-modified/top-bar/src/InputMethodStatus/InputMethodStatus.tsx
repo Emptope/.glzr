@@ -8,16 +8,9 @@ interface InputMethodStatusProps {
   keyboard: KeyboardOutput;
 }
 
-/**
- * InputMethodStatus
- * Displays the current input method (keyboard layout) and opens the Windows input method switcher (Win+Space) when clicked.
- * - Uses zebar keyboard provider to read the current layout string (e.g. 'en-US'). 
- *   The label is derived into a compact form like EN/zh-CN/JA, etc. <mcreference link="https://github.com/glzr-io/zebar" index="2">2</mcreference>
- */
 const InputMethodStatus: Component<InputMethodStatusProps> = (props) => {
   const { isActive, handleClick } = useAnimatedClick();
 
-  // Map a full layout string (e.g. 'en-US') to a compact label.
   const toLabel = (layout?: string): string => {
     if (!layout) return "LANG";
     const lower = layout.toLowerCase();
@@ -32,12 +25,10 @@ const InputMethodStatus: Component<InputMethodStatusProps> = (props) => {
     return lower.slice(0, 2).toUpperCase();
   };
 
-  // Derive label directly from keyboard provider output (reactive).
   const label = createMemo(() => toLabel(props.keyboard?.layout));
 
   const handleImeClick = () => {
     handleClick();
-    // Open the Windows input method switcher via AutoHotkey (Win+Space)
     props.glazewm.runCommand(
       "shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/OpenInputSwitcher.ahk",
     );

@@ -4,6 +4,7 @@
  */
 export const ICON_MAP: Record<string, string> = {
   "clash for windows": "Clash-32.png",
+  "unity hub": "Unity-Hub-32.png",
   acrobat: "Acrobat-32.png",
   applicationframehost: "SystemSettings-32.png",
   autohotkeyux: "AutoHotkeyUX-32.png",
@@ -42,6 +43,7 @@ export const ICON_MAP: Record<string, string> = {
   qbittorrent: "qbittorrent-32.png",
   qq: "QQ-32.png",
   quick_any2ico: "Quick_Any2Ico-32.png",
+  quicklook: "QuickLook-32.png",
   sldworks: "SLDWORKS-32.png",
   snippingtool: "SnippingTool-32.png",
   spotify: "Spotify-32.png",

@@ -11,8 +11,6 @@ interface TimeStatusProps {
 const TimeStatus: Component<TimeStatusProps> = (props) => {
   const { isActive, handleClick } = useAnimatedClick();
 
-  // Opens Windows Notification Center (Calendar/Time panel).
-  // Use glazewm.runCommand to be consistent with other buttons and avoid explorer protocol issues.
   const handleTimeClick = () => {
     handleClick();
     props.glazewm.runCommand(
@@ -27,7 +25,6 @@ const TimeStatus: Component<TimeStatusProps> = (props) => {
       onClick={handleTimeClick}
     >
       <span class="content">
-        <img src="./assets/icons/time-32.png"></img>
         <span class="time">{props.date?.formatted.substring(0, 5)}</span>
       </span>
     </button>

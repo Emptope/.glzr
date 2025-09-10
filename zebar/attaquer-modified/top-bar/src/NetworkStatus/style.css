@@ -1,31 +1,9 @@
 .network {
   display: flex;
-  width: 24px;
   margin: 0 6px;
-  justify-content: center;
   color: var(--white);
   &.clicked-animated .content {
     animation: appear 0.2s ease;
-  }
-
-  .ii {
-    font-size: 7px;
-    width: 0;
-  }
-  .labels { 
-    width: 0rem;
-    display: flex;
-    flex-direction: column; 
-   } 
-  .label {
-    display: none;
-    gap: 3px;
-    justify-content: space-between;
-    font-size: 8px;
-  }
-  .net-line {
-    width: 2.7rem;
-    justify-content: end;
   }
 }
 .i-wifi {

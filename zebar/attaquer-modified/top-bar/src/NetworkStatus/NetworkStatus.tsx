@@ -129,22 +129,6 @@ const NetworkStatus: Component<NetworkStatusProps> = (props) => {
     >
       <span class="content">
         {getNetworkIcon()}
-        <div class="labels">
-          <span class="label">
-            <span class="ii"></span>
-            <span class="net-line">
-              {props.network?.traffic.received.siValue}{" "}
-              {props.network?.traffic.received.siUnit}
-            </span>
-          </span>
-          <span class="label">
-            <span class="ii"></span>
-            <span class="net-line">
-              {props.network?.traffic.transmitted.siValue}{" "}
-              {props.network?.traffic.transmitted.siUnit}
-            </span>
-          </span>
-        </div>
       </span>
     </button>
   );
