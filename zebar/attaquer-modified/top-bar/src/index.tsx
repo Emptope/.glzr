@@ -11,13 +11,13 @@ import WindowTitle from "./WindowTitle/WindowTitle";
 import MediaStatus from "./Media/MediaStatus";
 import CurrentApps from "./CurrentApps/CurrentApps";
 import Systray from "./Systray/Systray";
-import InputMethodStatus from "./InputMethodStatus/InputMethodStatus";
-import CpuStatus from "./CpuStatus/CpuStatus";
-import MemoryStatus from "./MemoryStatus/MemoryStatus";
-import WeatherStatus from "./WeatherStatus/WeatherStatus";
-import VolumeStatus from "./VolumeStatus/VolumeStatus";
-import NetworkStatus from "./NetworkStatus/NetworkStatus";
-import BatteryStatus from "./BatteryStatus/BatteryStatus";
+import InputMethodStatus from "./InputMethod/InputMethodStatus";
+import CpuStatus from "./Cpu/CpuStatus";
+import MemoryStatus from "./Memory/MemoryStatus";
+import WeatherStatus from "./Weather/WeatherStatus";
+import VolumeStatus from "./Volume/VolumeStatus";
+import NetworkStatus from "./Network/NetworkStatus";
+import BatteryStatus from "./Battery/BatteryStatus";
 import TimeStatus from "./Time/TimeStatus";
 
 const providers = zebar.createProviderGroup({
@@ -27,7 +27,7 @@ const providers = zebar.createProviderGroup({
   cpu: { type: "cpu", refreshInterval: 5000 },
   memory: { type: "memory", refreshInterval: 5000 },
   weather: { type: "weather" },
-  network: { type: "network", refreshInterval: 2000 },
+  network: { type: "network", refreshInterval: 5000 },
   // audio: { type: "audio" },
   battery: { type: "battery", refreshInterval: 10000 },
   date: { type: "date", formatting: "EEE MMM d HH:mm" },
