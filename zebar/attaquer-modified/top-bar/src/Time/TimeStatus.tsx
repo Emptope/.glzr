@@ -25,7 +25,7 @@ const TimeStatus: Component<TimeStatusProps> = (props) => {
       onClick={handleTimeClick}
     >
       <span class="content">
-        <span class="time">{props.date?.formatted.substring(0, 5)}</span>
+        <span class="time">{props.date?.formatted}</span>
       </span>
     </button>
   );

@@ -30,7 +30,7 @@ const providers = zebar.createProviderGroup({
   network: { type: "network", refreshInterval: 2000 },
   // audio: { type: "audio" },
   battery: { type: "battery", refreshInterval: 10000 },
-  date: { type: "date", formatting: "HH:mm ccc d LLLL y" },
+  date: { type: "date", formatting: "EEE MMM d HH:mm" },
   media: { type: "media" },
 });
 
