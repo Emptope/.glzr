@@ -1,10 +1,11 @@
 .battery {
   color: var(--white);
+  width: 3.6rem;
 }
 
 .i-battery {
-  width: 25px;
-  height: 25px;
-  filter: brightness(0) invert(1);
+  width: 24px;
+  height: 24px;
   margin: 2px 6px 0 0;
+  filter: brightness(0) invert(1);
 }
