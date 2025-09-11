@@ -14,8 +14,8 @@ const ICONS = {
   noNetwork: "no-network-32.png",
 } as const;
 
-const WifiIcons: Component<{ 
-  signalStrength?: number; 
+const WifiIcons: Component<{
+  signalStrength?: number;
   isConnected?: boolean;
   class?: string;
 }> = (props) => {
@@ -24,10 +24,10 @@ const WifiIcons: Component<{
 
   const getBarOpacity = (barIndex: number): number => {
     if (!isConnected) return 0.3;
-    if (strength >= 75) return 1; 
-    if (strength >= 45 && barIndex <= 1) return 1; 
+    if (strength >= 75) return 1;
+    if (strength >= 45 && barIndex <= 1) return 1;
     if (strength >= 5 && barIndex === 0) return 1;
-    return 0.2; 
+    return 0.2;
   };
 
   return (
@@ -78,18 +78,18 @@ const NetworkStatus: Component<NetworkStatusProps> = (props) => {
   const isWifi = createMemo(
     () => props.network?.defaultInterface?.type === "wifi"
   );
-  
+
   const isWifiConnected = createMemo(
     () => isWifi() && props.network?.defaultGateway !== null && props.network?.defaultGateway !== undefined
   );
-  
+
   const wifiStrength = createMemo(
     () => props.network?.defaultGateway?.signalStrength
   );
 
   const getNetworkIcon = () => {
     const networkType = props.network?.defaultInterface?.type;
-    
+
     switch (networkType) {
       case "ethernet":
         return (
@@ -103,10 +103,10 @@ const NetworkStatus: Component<NetworkStatusProps> = (props) => {
         );
       case "wifi":
         return (
-          <WifiIcons 
-            signalStrength={wifiStrength()} 
+          <WifiIcons
+            signalStrength={wifiStrength()}
             isConnected={isWifiConnected()}
-            class="i-wifi" 
+            class="i-wifi"
           />
         );
       default:

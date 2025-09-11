@@ -62,7 +62,7 @@ function App() {
         {output.weather && <WeatherStatus weather={output.weather} />}
         <NetworkStatus network={output.network} glazewm={output.glazewm} />
         {/* <VolumeStatus audio={output.audio} glazewm={output.glazewm} /> */}
-        <BatteryStatus battery={output.battery} />
+        <BatteryStatus battery={output.battery} glazewm={output.glazewm} />
         <TimeStatus date={output.date} glazewm={output.glazewm} />
       </div>
     </div>

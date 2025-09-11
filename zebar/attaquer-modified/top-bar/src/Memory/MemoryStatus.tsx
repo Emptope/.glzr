@@ -18,7 +18,7 @@ const MemoryStatus: Component<MemoryStatusProps> = (props) => {
 
   const { isActive, handleClick } = useAnimatedClick();
 
-  const handleMemoryClick = (e: MouseEvent) => {
+  const handleMemoryClick = () => {
     handleClick();
     zebar.shellExec("C:\\Program Files\\Mem Reduct\\memreduct.exe");
   };

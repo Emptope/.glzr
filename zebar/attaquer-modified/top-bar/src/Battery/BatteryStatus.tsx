@@ -1,14 +1,15 @@
 import "./style.css";
 import { Component, createMemo } from "solid-js";
-import { BatteryOutput } from "zebar";
+import { BatteryOutput, GlazeWmOutput } from "zebar";
+import { useAnimatedClick } from "../hooks/useAnimatedClick";
 
 interface BatteryStatusProps {
   battery: BatteryOutput;
+  glazewm: GlazeWmOutput;
 }
 
-/** Base folder for battery icons */
 const ICON_BASE = "./assets/icons/";
-/** Icon file names used for different battery states/levels */
+
 const ICONS = {
   full: "battery-max-charged-32.png",
   charging: "battery-charging-32.png",
@@ -19,42 +20,23 @@ const ICONS = {
   discharging0: "battery-32.png",
 } as const;
 
-/**
- * Get usage rate class based on charge percent.
- * Returns one of: low-usage, medium-usage, high-usage, extreme-usage
- *
- * @param chargePercent - Battery percentage (0-100). If undefined, treated as 0.
- * @returns Usage class string for styling.
- */
 function getBatteryUsageRate(chargePercent?: number): string {
   const pct = chargePercent ?? 0;
-  if (pct > 70) return "low-usage";
-  if (pct > 40) return "medium-usage";
-  if (pct > 15) return "high-usage";
+  if (pct >= 70) return "low-usage";
+  if (pct >= 40) return "medium-usage";
+  if (pct >= 15) return "high-usage";
   return "extreme-usage";
 }
 
-/**
- * Resolve icon file name while discharging based on percent thresholds.
- *
- * @param percent - Battery percentage (0-100). If undefined, treated as 0.
- * @returns Icon file name for discharging state.
- */
 function getDischargingIcon(percent?: number): string {
   const pct = percent ?? 0;
-  if (pct > 90) return ICONS.discharging4;
-  if (pct > 70) return ICONS.discharging3;
-  if (pct > 40) return ICONS.discharging2;
-  if (pct > 15) return ICONS.discharging1;
+  if (pct >= 90) return ICONS.discharging4;
+  if (pct >= 70) return ICONS.discharging3;
+  if (pct >= 40) return ICONS.discharging2;
+  if (pct >= 15) return ICONS.discharging1;
   return ICONS.discharging0;
 }
 
-/**
- * Compute the icon src for the given battery state and percentage.
- *
- * @param battery - Battery output object (can be undefined).
- * @returns Full icon src path.
- */
 function getBatteryIconSrc(battery?: BatteryOutput): string {
   if (!battery?.state) return ICON_BASE + ICONS.discharging0;
   switch (battery.state) {
@@ -69,13 +51,6 @@ function getBatteryIconSrc(battery?: BatteryOutput): string {
   }
 }
 
-/**
- * Format the time text shown in the tooltip/title.
- * Handles charging, discharging, and idle states; falls back safely for undefined values.
- *
- * @param battery - Battery output object (can be undefined).
- * @returns A human-readable time string.
- */
 function formatBatteryTime(battery?: BatteryOutput): string {
   if (!battery?.state) return "idle";
   if (battery.state === "charging") {
@@ -93,28 +68,31 @@ function formatBatteryTime(battery?: BatteryOutput): string {
   return "idle";
 }
 
-/**
- * Battery status component displaying icon, percentage, and tooltip time.
- * Uses centralized constants and pure functions for maintainability.
- */
 const BatteryStatus: Component<BatteryStatusProps> = (props) => {
-  /**
-   * Wrap derived values with createMemo to keep them reactive.
-   */
   const titleText = createMemo(() => formatBatteryTime(props.battery));
   const iconSrc = createMemo(() => getBatteryIconSrc(props.battery));
   const percent = createMemo(() =>
     Math.round(props.battery?.chargePercent ?? 0)
   );
 
+  const { isActive, handleClick } = useAnimatedClick();
+
+  const handleOpenActionCenterClick = () => {
+    handleClick();
+    props.glazewm.runCommand(
+      "shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/OpenActionCenter.ahk"
+    );
+  };
+
   return (
-    <div
+    <button
       classList={{
-        template: true,
         battery: true,
         [getBatteryUsageRate(props.battery?.chargePercent)]: true,
+        "clicked-animated": isActive(),
       }}
       title={titleText()}
+      onClick={handleOpenActionCenterClick}
     >
       <img
         src={iconSrc()}
@@ -124,7 +102,7 @@ const BatteryStatus: Component<BatteryStatusProps> = (props) => {
         alt="Battery status"
       />
       {percent()}%
-    </div>
+    </button>
   );
 };
 

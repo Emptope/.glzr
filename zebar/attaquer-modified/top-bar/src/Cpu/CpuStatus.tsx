@@ -1,7 +1,6 @@
 import "./style.css";
 import { Component } from "solid-js";
-import { CpuOutput } from "zebar";
-import { GlazeWmOutput } from "zebar";
+import { CpuOutput, GlazeWmOutput } from "zebar";
 import { useAnimatedClick } from "../hooks/useAnimatedClick";
 
 interface CpuStatusProps {
@@ -19,7 +18,7 @@ const CpuStatus: Component<CpuStatusProps> = (props) => {
 
   const { isActive, handleClick } = useAnimatedClick();
 
-  const handleCpuClick = (e: MouseEvent) => {
+  const handleCpuClick = () => {
     handleClick();
     props.glazewm.runCommand(
       "shell-exec %windir%/system32/taskmgr.exe",
