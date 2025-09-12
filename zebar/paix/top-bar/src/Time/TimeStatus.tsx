@@ -14,7 +14,7 @@ const TimeStatus: Component<TimeStatusProps> = (props) => {
   const handleTimeClick = () => {
     handleClick();
     props.glazewm.runCommand(
-      "shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/OpenNotificationCenter.ahk"
+      "shell-exec %userprofile%/.glzr/zebar/paix/top-bar/dist/assets/scripts/OpenNotificationCenter.ahk"
     );
   };
 

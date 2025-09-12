@@ -30,7 +30,7 @@ const InputMethodStatus: Component<InputMethodStatusProps> = (props) => {
   const handleImeClick = () => {
     handleClick();
     props.glazewm.runCommand(
-      "shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/OpenInputSwitcher.ahk",
+      "shell-exec %userprofile%/.glzr/zebar/paix/top-bar/dist/assets/scripts/OpenInputSwitcher.ahk",
     );
   };
 

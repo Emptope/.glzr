@@ -13,7 +13,7 @@ const SearchButton: Component<SearchButtonProps> = (props) => {
   const handleSearchClick = () => {
     handleClick();
     props.glazewm.runCommand(
-      "shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/OpenWindowsSearch.ahk"
+      "shell-exec %userprofile%/.glzr/zebar/paix/top-bar/dist/assets/scripts/OpenWindowsSearch.ahk"
     );
   };
   return (

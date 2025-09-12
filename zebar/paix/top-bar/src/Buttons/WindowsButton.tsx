@@ -13,7 +13,7 @@ const WindowsButton: Component<WindowsButtonProps> = (props) => {
   const handleWindowsClick = () => {
     handleClick();
     props.glazewm.runCommand(
-      "shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/OpenStartMenu.ahk",
+      "shell-exec %userprofile%/.glzr/zebar/paix/top-bar/dist/assets/scripts/OpenStartMenu.ahk",
     );
   };
   return (

@@ -32,7 +32,7 @@ const Application: Component<ApplicationProps> = (props) => {
   const handleAppClick = () => {
     handleClick();
     props.glazewm.runCommand(
-      `shell-exec %userprofile%/.glzr/zebar/attaquer-modified/top-bar/dist/assets/scripts/FocusWindow.ahk ${props.window.handle}`
+      `shell-exec %userprofile%/.glzr/zebar/paix/top-bar/dist/assets/scripts/FocusWindow.ahk ${props.window.handle}`
     );
   };
 
