@@ -1,3 +1,3 @@
-# attaquer-modified
+# paix
 
-A modified version of [attaquer](https://github.com/iAttaquer/.glzr).
+A modified version of [attaquer](https://github.com/iAttaquer/.glzr) theme.
