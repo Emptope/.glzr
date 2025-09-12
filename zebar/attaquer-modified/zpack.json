@@ -43,15 +43,18 @@
         "shellCommands": [
           {
             "program": "explorer.exe",
-            "argsRegex": "ms-actioncenter://"
+            "argsRegex": "ms-actioncenter://",
+            "urlRegex": ""
           },
           {
             "program": "C:\\Program Files\\SystemInformer\\SystemInformer.exe",
-            "argsRegex": ""
+            "argsRegex": "",
+            "urlRegex": ""
           },
           {
             "program": "C:\\Program Files\\Mem Reduct\\memreduct.exe",
-            "argsRegex": ""
+            "argsRegex": "",
+            "urlRegex": ""
           }
         ]
       },
