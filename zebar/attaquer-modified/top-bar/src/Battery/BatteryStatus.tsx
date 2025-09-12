@@ -94,14 +94,16 @@ const BatteryStatus: Component<BatteryStatusProps> = (props) => {
       title={titleText()}
       onClick={handleOpenActionCenterClick}
     >
-      <img
-        src={iconSrc()}
-        class="i-battery"
-        width="20"
-        height="20"
-        alt="Battery status"
-      />
-      {percent()}%
+      <span class="content">
+        <img
+          src={iconSrc()}
+          class="i-battery"
+          width="20"
+          height="20"
+          alt="Battery status"
+        />
+        {percent()}%
+      </span>
     </button>
   );
 };

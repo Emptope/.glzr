@@ -6,5 +6,6 @@
   overflow: hidden;
   &.clicked-animated .content {
     animation: appear 0.2s ease;
+    -webkit-animation: appear 0.2s ease;
   }
 }

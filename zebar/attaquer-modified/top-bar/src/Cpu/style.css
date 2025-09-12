@@ -16,6 +16,11 @@
   }
 }
 
+.cpu:hover {
+  animation: hoverbutton 0.1s ease forwards;
+  -webkit-animation: hoverbutton 0.1s ease forwards;
+}
+
 .i-cpu {
   font-size: 14px;
   width: 16px;
