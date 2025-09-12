@@ -23,19 +23,22 @@
         "top-bar/dist/**"
       ],
       "caching": {
-        "defaultDuration": 31536000,
+        "defaultDuration": 604800,
         "rules": [
           {
             "pattern": "**/*.{js,css}",
-            "duration": 31536000
+            "duration": 604800,
+            "urlRegex": ""
           },
           {
             "pattern": "**/*.{ttf,woff,woff2,eot,otf}",
-            "duration": 31536000
+            "duration": 604800,
+            "urlRegex": ""
           },
           {
             "pattern": "**/*.{png,jpg,jpeg,gif,svg,ico}",
-            "duration": 31536000
+            "duration": 604800,
+            "urlRegex": ""
           }
         ]
       },
@@ -43,18 +46,15 @@
         "shellCommands": [
           {
             "program": "explorer.exe",
-            "argsRegex": "ms-actioncenter://",
-            "urlRegex": ""
+            "argsRegex": "ms-actioncenter://"
           },
           {
             "program": "C:\\Program Files\\SystemInformer\\SystemInformer.exe",
-            "argsRegex": "",
-            "urlRegex": ""
+            "argsRegex": ""
           },
           {
             "program": "C:\\Program Files\\Mem Reduct\\memreduct.exe",
-            "argsRegex": "",
-            "urlRegex": ""
+            "argsRegex": ""
           }
         ]
       },
