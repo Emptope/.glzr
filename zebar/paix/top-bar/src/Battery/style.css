@@ -4,13 +4,11 @@
   width: 3.6rem;
   &.clicked-animated .content {
     animation: appear 0.2s ease;
-    -webkit-animation: appear 0.2s ease;
   }
 }
 
 .battery:hover {
   animation: hoverbutton 0.1s ease forwards;
-  -webkit-animation: hoverbutton 0.1s ease forwards;
 }
 
 .i-battery {

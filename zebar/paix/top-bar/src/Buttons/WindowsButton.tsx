@@ -21,7 +21,9 @@ const WindowsButton: Component<WindowsButtonProps> = (props) => {
       class={`logo ${isActive() ? "clicked-animated" : ""}`}
       onClick={handleWindowsClick}
     >
-      <span class="content"></span>
+      <span class="content">
+        <i class="nf nf-dev-windows11"></i>
+      </span>
     </button>
   );
 };

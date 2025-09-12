@@ -32,7 +32,7 @@ const MemoryStatus: Component<MemoryStatusProps> = (props) => {
       onClick={handleMemoryClick}
     >
       <span class="content">
-        <span class="i"></span>
+        <span class="i-mem"></span>
         <div class="labels">
           <span class="label total">
             <span>USED</span>

@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
 
-  .i {
+  .i-cpu {
     padding: 2px 0;
     width: 16px;
     font-size: 14px;
@@ -12,22 +12,11 @@
 
   &.clicked-animated .content {
     animation: appear 0.2s ease;
-    -webkit-animation: appear 0.2s ease;
   }
 }
 
 .cpu:hover {
   animation: hoverbutton 0.1s ease forwards;
-  -webkit-animation: hoverbutton 0.1s ease forwards;
-}
-
-.i-cpu {
-  font-size: 14px;
-  width: 16px;
-  height: 16px;
-  padding: 2px 0;
-  display: inline-block;
-  line-height: 1;
 }
 
 .cpu-bar {
