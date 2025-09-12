@@ -180,13 +180,15 @@ img {
   text-rendering: optimizeLegibility;
 
   & > * {
-    text-shadow: none !important;
-
     .i-cpu,
-    .i-mem,
-    .i-weather,
-    .i-battery {
+    .i-mem {
       margin-right: 4px;
+    }
+    .i-weather {
+      margin-right: 6px;
+    }
+    .i-battery {
+      margin: 2px 6px 0 0;
     }
   }
 }

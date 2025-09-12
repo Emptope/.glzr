@@ -98,8 +98,6 @@ const BatteryStatus: Component<BatteryStatusProps> = (props) => {
         <img
           src={iconSrc()}
           class="i-battery"
-          width="20"
-          height="20"
           alt="Battery status"
         />
         {percent()}%
