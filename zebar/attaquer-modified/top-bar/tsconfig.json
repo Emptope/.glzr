@@ -11,6 +11,6 @@
     "noEmit": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": false
   }
 }
