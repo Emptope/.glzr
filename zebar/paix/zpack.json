@@ -1,6 +1,6 @@
 {
   "$schema": "https://github.com/glzr-io/zebar/raw/v3.1.1/resources/zpack-schema.json",
-  "name": "attaquer-modified",
+  "name": "paix",
   "version": "0.3.0",
   "description": "A modified version of attaquer theme (https://github.com/iAttaquer/.glzr).",
   "tags": [
@@ -24,23 +24,7 @@
       ],
       "caching": {
         "defaultDuration": 604800,
-        "rules": [
-          {
-            "pattern": "**/*.{js,css}",
-            "duration": 604800,
-            "urlRegex": ""
-          },
-          {
-            "pattern": "**/*.{ttf,woff,woff2,eot,otf}",
-            "duration": 604800,
-            "urlRegex": ""
-          },
-          {
-            "pattern": "**/*.{png,jpg,jpeg,gif,svg,ico}",
-            "duration": 604800,
-            "urlRegex": ""
-          }
-        ]
+        "rules": []
       },
       "privileges": {
         "shellCommands": [

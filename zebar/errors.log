@@ -4,3 +4,6 @@
 [2m2025-09-09T04:10:42.764703Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'attaquer'.
 [2m2025-09-12T04:43:40.477982Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'attaquer'.
 [2m2025-09-12T04:43:40.478228Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'attaquer'.
+[2m2025-09-12T05:24:39.768040Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'attaquer-modified'.
+[2m2025-09-12T05:24:39.768117Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'attaquer'.
+[2m2025-09-12T05:24:39.768124Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'attaquer'.
