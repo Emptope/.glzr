@@ -44,6 +44,7 @@ export const ICON_MAP: Record<string, string> = {
   qq: "QQ-32.png",
   quick_any2ico: "Quick_Any2Ico-32.png",
   quicklook: "QuickLook-32.png",
+  regedit: "regedit-32.png",
   sldworks: "SLDWORKS-32.png",
   snippingtool: "SnippingTool-32.png",
   spotify: "Spotify-32.png",

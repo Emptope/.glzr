@@ -109,12 +109,12 @@ window_behavior:
       centered: true
 
       # Whether to show floating windows as always on top.
-      shown_on_top: false
+      shown_on_top: true
 
     fullscreen:
       # Maximize the window if possible. If the window doesn't have a
       # maximize button, then it'll be fullscreen'ed normally instead.
-      maximized: false
+      maximized: true
 
       # Whether to show fullscreen windows as always on top.
       shown_on_top: false
@@ -145,14 +145,14 @@ window_rules:
         window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
       - window_process: { equals: 'PowerToys' }
         window_title: { regex: '.*? - Peek' }
-      - window_process: { equals: 'Lively' }
-        window_class: { regex: 'HwndWrapper' }
       - window_process: { equals: 'EXCEL' }
         window_class: { not_regex: 'XLMAIN' }
       - window_process: { equals: 'WINWORD' }
         window_class: { not_regex: 'OpusApp' }
       - window_process: { equals: 'POWERPNT' }
         window_class: { not_regex: 'PPTFrameClass' }
+      - window_process: { equals: 'GHelper'}
+        window_class: { regex: '^WindowsForms10\.Window\.'}
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
@@ -253,7 +253,7 @@ keybindings:
   - commands: ['wm-redraw']
     bindings: ['alt+shift+w']
 
-  # Launch CMD terminal. Alternatively, use `shell-exec wt` or
+  # Launch powershell terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
   - commands: ['shell-exec pwsh']
