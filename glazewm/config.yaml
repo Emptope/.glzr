@@ -109,7 +109,7 @@ window_behavior:
       centered: true
 
       # Whether to show floating windows as always on top.
-      shown_on_top: true
+      shown_on_top: false
 
     fullscreen:
       # Maximize the window if possible. If the window doesn't have a
@@ -157,6 +157,8 @@ window_rules:
         window_class: { regex: 'Chrome_WidgetWin_1' }
       - window_process: { equals: 'Weixin' }
         window_class: { regex: 'Qt51514QWindowIcon' }
+      - window_process: { equals: 'Clash for Windows' }
+        window_class: { regex: 'Chrome_WidgetWin_1' }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
