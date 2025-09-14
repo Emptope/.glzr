@@ -155,6 +155,8 @@ window_rules:
         window_class: { regex: '^WindowsForms10\.Window\.' }
       - window_process: { equals: 'QQ' }
         window_class: { regex: 'Chrome_WidgetWin_1' }
+      - window_process: { equals: 'Weixin' }
+        window_class: { regex: 'Qt51514QWindowIcon' }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
